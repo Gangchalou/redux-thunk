@@ -6,7 +6,7 @@ import  {composeWithDevTools} from 'redux-devtools-extension'
 
 const store = createStore(
     counter,
-    applyMiddleware(thunk) //异步中间件，实现异步请求
+    composeWithDevTools(applyMiddleware(thunk))//异步中间件，实现异步请求
 )
 
 export default store
